@@ -37,7 +37,8 @@ public class PrimitiveType {
 		PrimitiveType p = new PrimitiveType();
 //		p.test1();
 //		p.test2();
-		p.test3();
+//		p.test3();
+		p.test4();
 	}
 
 	
@@ -146,9 +147,28 @@ public class PrimitiveType {
 		System.out.printf("long: %s ~ %s\n", minLong, maxLong);
 	}
 	
+	/*
+	 * Data Overflow
+	 * 최대값이 넘치면 제일 작은 수로 다시 돌아간다.
+	 * 변수 공간은 한정적이기 때문에 돌아간다.
+	 */
+	
 	public void test3() {
 		int i = Integer.MAX_VALUE; // 2147483647
 		i = i + 1;
-		System.out.println("i="+i);
+		System.out.println("i="+i); // 데이터 오버플로우
+	}
+	
+	public void test4() {
+		char c = '헐';
+		System.out.println((int)c);
+		
+		char ga = '\uac00';
+		char na = '\ub098';
+		char da = '\ub2e4';
+		System.out.printf("%c %c %c\n", ga, na, da);
+		
+		char rak = '\uf914';
+		System.out.printf("%c\n", rak);
 	}
 }
