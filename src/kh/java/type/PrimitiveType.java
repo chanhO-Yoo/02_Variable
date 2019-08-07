@@ -38,7 +38,8 @@ public class PrimitiveType {
 //		p.test1();
 //		p.test2();
 //		p.test3();
-		p.test4();
+//		p.test4();
+		p.test5();
 	}
 
 	
@@ -170,5 +171,21 @@ public class PrimitiveType {
 		
 		char rak = '\uf914';
 		System.out.printf("%c\n", rak);
+	}
+	
+	public void test5() {
+		System.out.println("Hello World1");
+		//1. String을 리터럴으로 생성
+		//자주 사용되므로 기본형처럼 사용 가능하다.
+		String s = "hello world2"; 
+		System.out.println(s);
+		
+		//2. 객체를 생성해서 사용
+		//문자열은 참조형 변수
+		String s2 = new String("hello world3");
+		System.out.println(s2);
+		
+		String s3 = new String("hello" + " world4");
+		System.out.println(s3);
 	}
 }
